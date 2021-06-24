@@ -27,6 +27,14 @@ public class PreparedStateQueryTest {
         list.forEach(System.out::println);
     }
 
+    /**
+     * 返回多条记录
+     * @param clazz
+     * @param sql
+     * @param args
+     * @param <T>
+     * @return
+     */
     public <T> List<T> getForList(Class<T> clazz,String sql,Object...args){
         Connection conn = null;
         PreparedStatement ps = null;
@@ -78,6 +86,14 @@ public class PreparedStateQueryTest {
         System.out.println(order);
     }
 
+    /**
+     * 返回一条记录
+     * @param clazz
+     * @param sql
+     * @param args
+     * @param <T>
+     * @return
+     */
     public <T> T getInstance(Class<T> clazz,String sql,Object...args){
         Connection conn = null;
         PreparedStatement ps = null;
