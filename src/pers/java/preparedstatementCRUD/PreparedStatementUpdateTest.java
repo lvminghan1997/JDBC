@@ -69,7 +69,7 @@ public class PreparedStatementUpdateTest {
         String sql = "update `order` set order_name = ? where order_id = ?";
         update(sql,"DD","2");
     }
-    public void update(String sql ,Object...arg) throws Exception {
+    public void update(String sql ,Object...arg) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
